@@ -1,0 +1,24 @@
+.form-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 81px);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-content form {
+  // background-color: blueviolet;
+  width: 400px;
+  padding: 50px;
+  border-radius: 15px;
+  border: 1px solid #e2e1e1;
+}
+
+form button {
+  width: 100%;
+  margin: 20px 0;
+}

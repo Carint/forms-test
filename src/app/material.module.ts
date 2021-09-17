@@ -11,6 +11,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 const myModules = [
   MatSidenavModule,
@@ -24,7 +25,8 @@ const myModules = [
   MatSelectModule,
   MatDialogModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatToolbarModule,
 ];
 
 @NgModule({

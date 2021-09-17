@@ -1,20 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Medical tools</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-        </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
+<!-- Menu principal -->
+<app-main-menu (onOpened)="chanceState( $event )"></app-main-menu>
 
-<div class="container my-3">
-  <app-main-record></app-main-record>
-</div>
+<!-- Contenido del sidenav -->
+<mat-sidenav-container *ngIf="dataUser.status === true; else login">
+  <mat-sidenav [(opened)]="opened" mode="side">
+    <!-- Contenido del sidenav -->
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- Contenido de página -->
+    <div class="container my-3">
+      <app-main-record></app-main-record>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!-- Contenido del inicio de sesión -->
+<ng-template #login>
+  <app-login></app-login>
+</ng-template>
+

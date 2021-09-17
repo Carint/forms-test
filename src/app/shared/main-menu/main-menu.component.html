@@ -1,0 +1,40 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Medical tools</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<mat-toolbar color="primary">
+  <button *ngIf="dataUser.status === true" mat-icon-button (click)="chanceState()">
+   <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{ dataUser.company }}</span>
+  <span class="spacer"></span>
+  <div *ngIf="dataUser.status === true; else login">
+    <button mat-icon-button>
+      <mat-icon>person</mat-icon>
+    </button>
+    <button mat-icon-button>
+      <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+  <ng-template #login>
+    <div class="fs-6">
+      Inicio de sesión
+    </div>
+  </ng-template>
+</mat-toolbar>
+
+
+

@@ -3,18 +3,21 @@ import { CommonModule } from '@angular/common';
 
 import { MaterialModule } from '../material.module';
 
-import { MainRecordComponent } from './main-record/main-record.component';
+import { MainMenuComponent } from './main-menu/main-menu.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
-    MainRecordComponent
+    MainMenuComponent,
+    SidenavComponent
   ],
   exports: [
-    MainRecordComponent
+    MainMenuComponent,
+    SidenavComponent
   ],
   imports: [
     CommonModule,
     MaterialModule
   ]
 })
-export class MedicalRecordModule { }
+export class SharedModule { }

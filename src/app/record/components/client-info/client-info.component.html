@@ -1,0 +1,76 @@
+<mat-accordion>
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Nombre del paciente
+      </mat-panel-title>
+      <mat-panel-description>
+        Click para ver información
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <form>
+      <h3 class="fw-bold mt-4 mb-2">Datos generales</h3>
+      <div class="row">
+        <mat-form-field appearance="outline" class="col-md-6">
+          <mat-label>Nombres</mat-label>
+          <input type="text" matInput placeholder="Nombres">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-md-6">
+          <mat-label>Apellidos</mat-label>
+          <input type="text" matInput placeholder="Apellidos">
+        </mat-form-field>
+        <div class="col">
+          <mat-form-field appearance="outline" class="me-2 col-4">
+            <mat-label>Fecha de naciemiento</mat-label>
+            <input matInput [matDatepicker]="birthDate">
+            <mat-datepicker-toggle matSuffix [for]="birthDate"></mat-datepicker-toggle>
+            <mat-datepicker #birthDate></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="me-2 col-2">
+            <mat-label>Edad</mat-label>
+            <input matInput placeholder="Edad">
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="col-sm-2">
+            <!-- <mat-label>Cars</mat-label> -->
+            <select matNativeControl required>
+              <option value="dias">Dias</option>
+              <option value="semanas">Semanas</option>
+              <option value="meses">Meses</option>
+              <option value="años">Años</option>
+            </select>
+          </mat-form-field>
+        </div>
+        <mat-form-field appearance="outline" class="col-md-6">
+          <mat-label>Identidad</mat-label>
+          <input matInput placeholder="Identidad">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-md-6">
+          <mat-label>Teléfono</mat-label>
+          <input matInput placeholder="Teléfono">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-md-6">
+          <mat-label>Procedencia</mat-label>
+          <input matInput placeholder="Procedencia">
+        </mat-form-field>
+      </div>
+
+      <h3 class="fw-bold mt-4 mb-2">Antecedentes patológicos</h3>
+      <mat-form-field appearance="outline" class="col-12">
+        <mat-label>Personales</mat-label>
+        <textarea matInput placeholder="Antecedentes patológicos personales"></textarea>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline" class="col-12">
+        <mat-label>Familiares</mat-label>
+        <textarea matInput placeholder="Antecedentes patológicos familiares"></textarea>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="outline" class="col-12">
+        <mat-label>Quirúrgicos</mat-label>
+        <textarea matInput placeholder="Antecedentes quirúrgicos"></textarea>
+      </mat-form-field>
+    </form>
+    <!-- Button trigger modal -->
+    <button mat-raised-button class="my-3" color="primary" data-bs-toggle="modal" data-bs-target="#updateModal">Actualizar</button>
+  </mat-expansion-panel>
+</mat-accordion>
